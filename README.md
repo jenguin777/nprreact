@@ -20,10 +20,12 @@
 * Morgan - express middleware used for automated logging of requests, responses and related data to stdout (i.e., logs remote ip, request method, http version, response status, etc.).
 
 # To run the application
-* Start mongod in one terminal.
-* Navigate to server folder and "nodemon server.js" to start server.
-* Navigate to root directory and "yarn start" to start client.
-Just run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine. Or you can see a deployed version [here.](https://nprreact.herokuapp.com/)
+* Run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine.
+* Start mongod via command line / terminal.
+* Navigate to the server folder and run "nodemon server.js" to start server.
+* Navigate to the client directory and run "yarn start" to start client.
+
+Alternately, you can see a deployed version [here.](https://nprreact.herokuapp.com/)
 
 # License
 MIT license applies.
