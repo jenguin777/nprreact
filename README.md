@@ -1,3 +1,38 @@
+# NPR React
+* React-based rendition of the Mongo Scraper Article Search application, a web application that lets users view and save the latest articles displayed at NPR's website.
+
+* Whenever a user visits the site, the app scrapes stories and display them for the user. The user can then save articles for later viewing. The app scrapes and displays the following information for each article:
+
+		*Headline - the title of the article
+
+		*Summary - a short summary of the article
+
+		*URL - the url to the original article
+
+# Technologies Used
+* Node.js - open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser
+* Express.js - build server-side routes and functions
+* Javascript
+* React (components, helper/util functions, mounting lifecycle to query and display articles based on user searches)
+* Mongoose (Mongo DB) - define schema, create custom methods to fetch data, create relationships between collections (tables)
+* Cheerio- scrapes articles from https://www.npr.org/
+* Axios - a promised-based http library, similar to jQuery's Ajax library. It works on the client and on the server.
+* Morgan - express middleware used for automated logging of requests, responses and related data to stdout (i.e., logs remote ip, request method, http version, response status, etc.).
+
+# To run the application
+* Start mongod in one terminal.
+* Navigate to server folder and "nodemon server.js" to start server.
+* Navigate to root directory and "yarn start" to start client.
+Just run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine. Or you can see a deployed version [here.](INSERT URL HERE)
+
+# License
+MIT license applies.
+
+# Code of Conduct
+Be nice and don't talk to strangers.
+
+******************************************************************************************************************************
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
