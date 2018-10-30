@@ -19,15 +19,10 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(session({
-//   secret: process.env.APP_SECRET || 'this is the default passphrase',
   store: new MongoStore({ mongooseConnection: dbConnection }),
   resave: false,
   saveUninitialized: false
 }));
-
-// Passport
-app.use(passport.initialize());
-app.use(passport.session()); // will call the deserializeUser
 
 // If its production environment!
 if (process.env.NODE_ENV === 'production') {
