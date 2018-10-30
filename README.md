@@ -21,9 +21,9 @@
 
 # To run the application
 * Run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine.
-* Start mongod via command line / terminal.
-* Navigate to the server folder and run "nodemon server.js" to start server.
-* Navigate to the client directory and run "yarn start" to start client.
+* Run "mongod" (to start the Mongo database) via command line / terminal.
+* Navigate to the server folder and run "nodemon server.js" to start the server.
+* Navigate to the client directory and run "yarn start" to start the client.
 
 Alternately, you can see a deployed version [here.](https://nprreact.herokuapp.com/)
 
