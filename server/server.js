@@ -1,3 +1,6 @@
+var articleRoutes = require("./routes/article");
+var indexRoutes = require("./routes/index");
+
 // Loading evnironmental variables here
 if (process.env.NODE_ENV !== 'production') {
 	console.log('loading dev environments');
@@ -10,7 +13,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./db'); // loads our connection to the mongo database
-const routes = require("./routes");
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -18,6 +21,13 @@ const PORT = process.env.PORT || 3001;
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(session({
+	secret: process.env.APP_SECRET || 'this is the default passphrase',
+	store: new MongoStore({ mongooseConnection: dbConnection }),
+	resave: false,
+	saveUninitialized: false
+  }));
+
 app.use(session({
   store: new MongoStore({ mongooseConnection: dbConnection }),
   resave: false,
@@ -35,7 +45,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Add routes, both API and view
-app.use(routes);
+// Define which routes to use
+app.use("/", indexRoutes);
+app.use("/articles", articleRoutes);
 
 // Error handler
 app.use(function(err, req, res, next) {
