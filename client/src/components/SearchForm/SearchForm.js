@@ -93,14 +93,14 @@ class SearchForm extends React.Component  {
                   <div className="form-group">
                     <label htmlFor="pwd">Number of Records to Retrieve:</label>
                     <select id="article-count" className="custom-select" aria-labelledby="dropdownMenuButton">
-                      <option selected value="1">1</option>
-                      <option value="5" selected>5</option>
+                      <option value="1">1</option>
+                      <option value="5" defaultValue>5</option>
                       <option value="10">10</option>
                     </select>
                   </div>
 
                   <div className="form-group">
-                      <label for="start-year">Start Year</label>
+                      <label htmlFor="start-year">Start Year</label>
                       <input
                         value={this.state.startYear}
                         onChange={this.handleInputChange}  
@@ -113,7 +113,7 @@ class SearchForm extends React.Component  {
                   </div>
 
                   <div className="form-group">
-                      <label for="end-year">End Year</label>
+                      <label htmlFor="end-year">End Year</label>
                       <input
                         value={this.state.startYear}
                         onChange={this.handleInputChange}  

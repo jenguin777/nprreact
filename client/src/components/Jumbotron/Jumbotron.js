@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Background from "../../images/squareNews.jpg";
 
 // Jumbotron parallax code
 // var jumboHeight = $(".jumbotron").outerHeight();
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Jumbotron = () => (
 
     <div>
-        <div className="bg"></div>
+        <div className="bg" style={{backgroundImage: "url(" + Background + ")"}}></div>
         <div className="jumbotron jumbotron-fluid">
             <h1>Mongo Scraper</h1>
             <h4>National Public Radio Edition</h4>
