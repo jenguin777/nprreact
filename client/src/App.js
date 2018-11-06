@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
-// import Results from "./components/pages/Results";
-// import SavedArticles from "./components/pages/savedArticles";
 import Jumbotron from "./components/Jumbotron";
 import SearchForm from "./components/SearchForm";
+import Articles from "./pages/Articles";
+import SavedArticles from "./pages/SavedArticles";
+import NoMatch from "./pages/NoMatch";
+import Results from "./components/Results/Results";
 
 const App = () => (
   <Router>
@@ -14,8 +16,14 @@ const App = () => (
       <Wrapper>
         <Jumbotron />
         <SearchForm />
-        {/* <Route exact path="/" component={Results} />
-        <Route exact path="/saved" component={SavedArticles} /> */}
+        <div><br></br></div>
+        <Results />
+        <Switch>
+        <Route exact path="/" component={Articles} />
+        <Route exact path="/articles" component={Articles} />
+        <Route exact path="/savedArticles" component={SavedArticles} />
+        <Route component={NoMatch}/>
+      </Switch>
       </Wrapper>
     </div>
   </Router>

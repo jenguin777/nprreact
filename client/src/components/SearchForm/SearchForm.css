@@ -3,7 +3,12 @@ form.search {
   margin-bottom: 10px;
 }
 
-form.search button[type="submit"] {
+#searchButton {
   float: right;
   margin-top: 10px;
 }
+
+form {
+  align-content: center
+}
+
