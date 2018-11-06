@@ -5,7 +5,7 @@ import Wrapper from "./components/Wrapper";
 import Jumbotron from "./components/Jumbotron";
 import SearchForm from "./components/SearchForm";
 import Articles from "./pages/Articles";
-import SavedArticles from "./pages/SavedArticles";
+// import SavedArticles from "./pages/SavedArticles";
 import NoMatch from "./pages/NoMatch";
 import Results from "./components/Results/Results";
 
@@ -21,7 +21,7 @@ const App = () => (
         <Switch>
         <Route exact path="/" component={Articles} />
         <Route exact path="/articles" component={Articles} />
-        <Route exact path="/savedArticles" component={SavedArticles} />
+        {/* <Route exact path="/savedArticles" component={SavedArticles} /> */}
         <Route component={NoMatch}/>
       </Switch>
       </Wrapper>
