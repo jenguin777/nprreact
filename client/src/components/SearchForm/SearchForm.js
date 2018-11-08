@@ -37,17 +37,13 @@ class SearchForm extends React.Component  {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log('EVENT ', event.target)
+    console.log('EVENT ', event.target);
     API.getAPIArticles(this.state.articleSearch)
       .then(res => {
         this.setState({ articles: res.data })
-        console.log('res ', res.data)
+        // console.log('res ', res.data)
       })
       .catch(err => console.log(err));
-    // var query = this.state
-    // axios.post('/articles/search', query).then(response => {
-    //   console.log(response);
-    // })
   };
 
 
@@ -115,7 +111,7 @@ class SearchForm extends React.Component  {
                   <div className="form-group">
                       <label htmlFor="end-year">End Year</label>
                       <input
-                        value={this.state.startYear}
+                        value={this.state.endYear}
                         onChange={this.handleInputChange}  
                         type="text"
                         name="endYear"

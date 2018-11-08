@@ -1,4 +1,4 @@
-var articleRoutes = require("./routes/articles");
+var articleRoutes = require("./routes/articleAPI");
 var indexRoutes = require("./routes/index");
 
 // Loading evnironmental variables here
