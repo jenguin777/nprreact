@@ -1,7 +1,7 @@
 # NPR React
-* React-based rendition of the Mongo Scraper Article Search application, a web application that lets users view and save the latest articles displayed at NPR's website.
+* React-based New York Times Article Search application, a web application that lets users view and save the latest New York Times articles.
 
-* Whenever a user visits the site, the app scrapes stories and display them for the user. The user can then save articles for later viewing. The app scrapes and displays the following information for each article:
+* The user can enter a topic, a start year, an end year, and select the number of articles to display. The app displays the following information for each article:
 
 		*Headline - the title of the article
 
@@ -15,7 +15,6 @@
 * Javascript
 * React (components, helper/util functions, mounting lifecycle to query and display articles based on user searches)
 * Mongoose (Mongo DB) - define schema, create custom methods to fetch data, create relationships between collections (tables)
-* Cheerio- scrapes articles
 * Axios - a promised-based http library, similar to jQuery's Ajax library. It works on the client and on the server.
 * Morgan - express middleware used for automated logging of requests, responses and related data to stdout (i.e., logs remote ip, request method, http version, response status, etc.).
 
