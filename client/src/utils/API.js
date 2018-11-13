@@ -11,10 +11,10 @@ export default {
   // },
   
   // Get all articles
-  getAPIArticles: function() {
+  getAPIArticles: function( articleInfo) {
     let query = BASEURL + API_KEY;
     console.log("API Query: " + query);
-    return axios.get("/api/apiArticles", { params: { q: query } });
+    return axios.get(BASEURL + API_KEY + "&q=" + articleInfo.q);
   },  
   
 

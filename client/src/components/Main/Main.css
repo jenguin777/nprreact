@@ -1,0 +1,14 @@
+form.search {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+#searchButton {
+  float: right;
+  margin-top: 10px;
+}
+
+form {
+  align-content: center
+}
+
