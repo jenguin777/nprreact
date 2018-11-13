@@ -1,5 +1,5 @@
 # NPR React
-* React-based New York Times Article Search application, a web application that lets users view and save the latest New York Times articles.
+* React-based New York Times Article Search application, a web application that lets users view the latest New York Times articles.
 
 * The user can enter a topic, a start year, an end year, and select the number of articles to display. The app displays the following information for each article:
 
